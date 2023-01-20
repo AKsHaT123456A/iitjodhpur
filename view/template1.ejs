@@ -1,0 +1,69 @@
+<div className="resume-template">
+    {/* Name section */}
+    <div className="middle bigFont">{name}</div>
+    <div className="middle">
+      <span className="middle space ">{email}</span>
+      <span className="middle space">{mobile}</span>
+    </div>
+    {/* heading */}
+    <div className="wrapHeading">
+      <div className="headingResume">{sections.summary}</div>
+      <div>{summaryDet}</div>
+    </div>
+    {/* heading */}
+    <div className="wrapHeading">
+      <div className="headingResume">{sections.experience}</div>
+      {/* Company */}
+            <div className="flex-seperate">
+              <span className="subHeadingResume">{data.companyName}</span>
+              <span className="subHeadingResume">{data.address}</span>
+            </div>
+            <div>{data.desc}</div>
+            {/* jobs */}
+            <div className="jobs">
+              <div className="flex-seperate">
+                <span className="subsubHeadingResume">{data.jobTitle}</span>
+                <span>
+                </span>
+              </div>
+              <ul>
+                <li></li>
+              </ul>
+            </div>
+        );
+      })}
+    </div>
+    <div className="wrapHeading">
+      <div className="headingResume">Education</div>
+      <div className="subHeadingResume">Stanford Graduate</div>
+      <ul>
+        <li>lba</li>
+        <li>lba</li>
+      </ul>
+    </div>
+    <div className="wrapHeading">
+      <div className="headingResume">Additional</div>
+      <ul>
+        <li>lba</li>
+        <li>lba</li>
+      </ul>
+    </div>
+  </div>
+  <div className="inputData">
+    {/* Email */}
+    <TextField
+      <!--id="input-with-icon-textfield" -->
+      label="Email"
+      className="margin-2"
+      type="email"
+      name="username"
+      InputProps={{
+        endAdornment: (
+          <InputAdornment position="start">
+            <AccountCircle />
+          </InputAdornment>
+        ),
+      }}
+      variant="standard"
+    />
+      </div>
