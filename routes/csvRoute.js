@@ -19,8 +19,8 @@ router.get("/detail", (req, res) => {
             host: "smtp.ethereal.email",
             port: 587,
             auth: {
-              user: "kadin.hickle27@ethereal.email",
-              pass: "rdyp9CxgVW3TnZwHE3",
+              user: process.env.CSV_EMAIL,
+              pass: process.env.CSV_PASSWORD,
             },
           });
           let info = await transporter.sendMail({
@@ -39,9 +39,9 @@ router.get("/detail", (req, res) => {
             (Your sign-off)</pre>,`,
             attachments:
               {
-                  filename: `${req.files}`,
+                  filename: "Resume.pdf",
+                  pathname:__dirname+"/routes"+"/docs"+`/${req.body.name}`,
                   content: `pdf attached`,
-                  contentType: 'text/plain' 
               },
           });
         }

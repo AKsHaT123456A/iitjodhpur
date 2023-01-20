@@ -16,7 +16,7 @@ async function main() {
   let info = await transporter.sendMail({
     from: process.env.EMAIL_TO, 
     to: to, 
-    subject: "Hello ✔", 
+    subject: "Otp Verification", 
     text: "Your OTP is"+text 
   });
   console.log("sent");

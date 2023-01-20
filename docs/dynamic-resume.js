@@ -79,24 +79,24 @@ const dynamicResume= (options, themeOptions)=>{
             <!-- SPELLING MISTAKE -->
             <div class="left-side d-inline-block">
                 <div class="profile-image">
-                    <img class="img-fluid" src="https://pbs.twimg.com/media/ElkLaHCU4AIqplX?format=jpg" alt="">
+                    <img class="img-fluid" src="../public/img/download.png" alt="">
                 </div>
                 <div class="contact ml-2 mt-2">
                     <div class="heading-text text-uppercase">Contact</div>
                     <p class="para mb-1">
-                        House no: 72-2 Jigatola, Dhaka <br>
-                        ${options.phone} <br>
-                        ${options.phone} <br>
-                        ${options.email} <br>
+                       ${options.address || ""}
+                        ${options.phone || ""} <br>
+                        ${options.phone || ""} <br>
+                        ${options.email || ""} <br>
                         www.website-domain.com
                     </p>
                 </div>
                 <div class="expert ml-2 mt-2">
                     <div class="heading-text text-uppercase">Expertise Area</div>
                     <p class="para mb-1">
-                    ${options.exp_1} <br>
-                    ${options.exp_2} <br>
-                    ${options.exp_3} <br>
+                    ${options.exp_1 || ""} <br>
+                    ${options.exp_2 || ""} <br>
+                    ${options.exp_3 || ""} <br>
                         Digital marketing<br>
                     </p>
                 </div>
@@ -104,7 +104,7 @@ const dynamicResume= (options, themeOptions)=>{
                 <div class="skill ml-2 mt-2">
                     <div class="heading-text text-uppercase">IT Skill</div>
                     <p class="para mb-1">
-                    ${options.skill}
+                    ${options.skill||""}
                     </p>
                 </div>
 
@@ -112,20 +112,17 @@ const dynamicResume= (options, themeOptions)=>{
                 <div class="hobbies ml-2 mt-2">
                     <div class="heading-text text-uppercase">hobbies</div>
                     <p class="para mb-1">
-                        Cricket<br>
-                        Football <br>
-                        Watching Movies<br>
-                        Travel<br>
+                       ${options.hobbies||""}
                     </p>
                 </div>
             </div>
             <div class="right-side d-inline-block m-0 p-0 align-top">
-                <h2 class="name text-uppercase ml-3 my-2">${options.name}</h2>
+                <h2 class="name text-uppercase ml-3 my-2">${options.name||""}</h2>
 
                 <div class="contact ml-3 mt-3">
                     <div class="heading-text text-uppercase">About Me</div>
                     <p class="para mb-1">
-                    ${options.about}
+                    ${options.about||""}
                     </p>
                 </div>
                 <div class="personal ml-3 mt-3">
@@ -134,19 +131,19 @@ const dynamicResume= (options, themeOptions)=>{
                         <tbody>
                             <tr class="border">
                                 <td>Father's Name</td>
-                                <td>${options.f_name}</td>
+                                <td>${options.f_name||""}</td>
                             </tr>
                             <tr class="border">
                                 <td>Mather's Name</td>
-                                <td>${options.m_name}</td>
+                                <td>${options.m_name||""}</td>
                             </tr>
                             <tr class="border">
                                 <td>Date of Birth</td>
-                                <td>${options.birth}</td>
+                                <td>${options.birth||""}</td>
                             </tr>
                             <tr class="border">
                                 <td>Permanent Address</td>
-                                <td>Shohorbari, Singra, Natore</td>
+                                <td>${options.address||""}</td>
                             </tr>
                         </tbody>
 
@@ -157,12 +154,9 @@ const dynamicResume= (options, themeOptions)=>{
                     <table class="per-info">
                         <tbody>
                             <tr class="border">
-                                <td>2016-2019</td>
+                                <td>${options.yearofeducations||""}</td>
                                 <td>
-                                    bachelor of Business Administration <br>
-                                    CGPA 3.03 <br>
-                                    Major in FInance <br>
-                                    Daffodil international University
+                                   ${options.education||""}
                                 </td>
                             </tr>
                             <tr class="border">

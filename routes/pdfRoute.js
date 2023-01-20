@@ -6,8 +6,8 @@ const dynamicResume = require("../docs/dynamic-resume");
 const staticResume = require("../docs/static-resume");
 
 const options = {
-  height: "10.5in", // allowed units: mm, cm, in, px
-  width: "8in", // allowed units: mm, cm, in, pxI
+  height: "10.5in", 
+  width: "8in", 
 };
 
 router.get("/", (req, res, next) => {
@@ -31,7 +31,6 @@ router.get("/resume-maker/:theme", (req, res, next) => {
 
 router.post("/resume-maker", (req, res, next) => {
   console.log(req.body);
-  // LOWERCASE -> REMOVE SPACE -> SHORT NAME
   const userName = req.body.name;
   const lowercaseName = userName.toLowerCase();
   const noSpaceName = lowercaseName.replace(" ", "");
