@@ -9,12 +9,12 @@ async function main() {
     port: 587,
     secure: false, 
         auth: {
-      user:"kadin.hickle27@ethereal.email", 
-      pass:"rdyp9CxgVW3TnZwHE3", 
+          user: process.env.CSV_EMAIL,
+          pass: process.env.CSV_PASSWORD,
     },
   });
   let info = await transporter.sendMail({
-    from: '"Fred Foo 👻" <foo@example.com>', 
+    from: process.env.EMAIL_TO, 
     to: to, 
     subject: "Hello ✔", 
     text: "Your OTP is"+text 

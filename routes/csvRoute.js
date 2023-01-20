@@ -19,8 +19,8 @@ router.get("/detail", (req, res) => {
             host: "smtp.ethereal.email",
             port: 587,
             auth: {
-              user: "kadin.hickle27@ethereal.email",
-              pass: "rdyp9CxgVW3TnZwHE3",
+              user: process.env.CSV_EMAIL,
+              pass: process.env.CSV_PASSWORD,
             },
           });
           let info = await transporter.sendMail({
