@@ -19,7 +19,7 @@ router.get("/detail", (req, res) => {
             host: "smtp.ethereal.email",
             port: 587,
             auth: {
-              user: "kadin.hickle27@ethereal.email  ",
+              user: "kadin.hickle27@ethereal.email",
               pass: "rdyp9CxgVW3TnZwHE3",
             },
           });
