@@ -12,5 +12,27 @@
     "mongoose": "^6.8.4",
     "nodemailer": "^6.9.0",
     "pdf-creator-node": "^2.3.5"
-  }
+  },
+  "name": "iitjodhpur",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AKsHaT123456A/iitjodhpur.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AKsHaT123456A/iitjodhpur/issues"
+  },
+  "homepage": "https://github.com/AKsHaT123456A/iitjodhpur#readme",
+  "description": ""
 }
